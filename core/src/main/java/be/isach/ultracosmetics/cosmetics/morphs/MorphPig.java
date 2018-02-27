@@ -3,6 +3,11 @@ package be.isach.ultracosmetics.cosmetics.morphs;
 import be.isach.ultracosmetics.UltraCosmetics;
 import be.isach.ultracosmetics.cosmetics.type.MorphType;
 import be.isach.ultracosmetics.player.UltraPlayer;
+import be.isach.ultracosmetics.util.SoundUtil;
+import be.isach.ultracosmetics.util.Sounds;
+import org.bukkit.event.EventHandler;
+import org.bukkit.event.block.Action;
+import org.bukkit.event.player.PlayerInteractEvent;
 
 /**
  * Represents an instance of a pig morph summoned by a player.
@@ -11,7 +16,8 @@ import be.isach.ultracosmetics.player.UltraPlayer;
  * @since 08-27-2015
  */
 public class MorphPig extends Morph {
-	private boolean cooldown = false;
+
+	private long coolDown = 0L;
 
 	public MorphPig(UltraPlayer owner, UltraCosmetics ultraCosmetics) {
 		super(owner, MorphType.valueOf("pig"), ultraCosmetics);
@@ -19,26 +25,17 @@ public class MorphPig extends Morph {
 
 	@Override
 	public void onUpdate() {
-		/*for (Entity ent : getPlayer().getNearbyEntities(0.2, 0.2, 0.2)) {
-			if (ent instanceof Creature || ent instanceof Player) {
-				if (!ent.hasMetadata("Mount")
-				    && !ent.hasMetadata("Pet")
-				    && ent != getPlayer()
-				    && ent != disguise.getEntity()
-				    && !cooldown) {
-					cooldown = true;
-					Bukkit.getScheduler().runTaskLater(getUltraCosmetics(), () -> cooldown = false, 20);
-					SoundUtil.playSound(getPlayer(), Sounds.PIG_IDLE, .2f, 1.5f);
-					Vector v = new Vector(0, 0.6, 0);
-					Vector vEnt = ent.getLocation().toVector().subtract(getPlayer().getLocation().toVector()).add(v);
-					Vector vPig = getPlayer().getLocation().toVector().subtract(ent.getLocation().toVector()).add(v);
-					vEnt.setY(0.5);
-					vPig.setY(0.5);
-					MathUtils.applyVelocity(ent, vEnt.multiply(0.75));
-					MathUtils.applyVelocity(getPlayer(), vPig.multiply(0.75));
-				}
-			}
-		}*/
+	}
+
+	@EventHandler
+	public void onLeftClick(PlayerInteractEvent event) {
+		if ((event.getAction() == Action.LEFT_CLICK_AIR
+				|| event.getAction() == Action.LEFT_CLICK_BLOCK) && event.getPlayer() == getPlayer()) {
+			if (coolDown > System.currentTimeMillis()) return;
+			event.setCancelled(true);
+			SoundUtil.playSound(event.getPlayer().getLocation(), Sounds.PIG_IDLE);
+			coolDown = System.currentTimeMillis() + 500;
+		}
 	}
 
 	@Override

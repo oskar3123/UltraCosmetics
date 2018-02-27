@@ -251,11 +251,11 @@ public class MessageManager {
 		addMessage("Morphs.Chicken.name", "&f&lChicken");
 		addMessage("Morphs.Chicken.skill", "&eCrouch&7 to: &aLay eggs");
 		addMessage("Morphs.Slime.name", "&a&lSlime");
-		addMessage("Morphs.Slime.skill", "&eCrouch&7 to: &aBounce");
+		addMessage("Morphs.Slime.skill", "&eTODO&7 to: &aTODO");
 		addMessage("Morphs.Pig.name", "&d&lPig");
 		addMessage("Morphs.Pig.skill", "&eCollide&7 to: &aBounce Players");
 		addMessage("Morphs.Enderman.name", "&5&lEnderman");
-		addMessage("Morphs.Enderman.skill", "&eDouble Jump&7 to: &aTeleport");
+		addMessage("Morphs.Enderman.skill", "&eTODO&7 to: &aTODO");
 		addMessage("Morphs.Bat.name", "&8&lBat");
 		addMessage("Morphs.Bat.skill", "&eLeft-Click&7 to: &aFlap");
 		addMessage("Morphs.Creeper.name", "&a&lCreeper");
@@ -263,7 +263,7 @@ public class MessageManager {
 		addMessage("Morphs.Creeper.charging", "&a&lCharging: %chargelevel%/100");
 		addMessage("Morphs.Creeper.release-to-explode", "&f&lRelease to explode!");
 		addMessage("Morphs.Snowman.name", "&f&lSnowman");
-		addMessage("Morphs.Snowman.skill", "&eLeft Click&7 to: &aThrow Snowball");
+		addMessage("Morphs.Snowman.skill", "&eLeft-Click&7 to: &aThrow Snowball");
 		addMessage("Morphs.Morph", "%prefix% &9You morphed into %morphname%");
 		addMessage("Morphs.Unmorph", "%prefix% &9You unmorphed from %morphname%");
 		addMessage("Morphs.WitherSkeleton.name", "&8&lWither Skeleton");
@@ -273,13 +273,13 @@ public class MessageManager {
 		addMessage("Morphs.Cow.name", "&8&lCow");
 		addMessage("Morphs.Cow.skill", "&eLeft-Click&7 to: &aMoo");
 		addMessage("Morphs.Sheep.name", "&f&lSheep");
-		addMessage("Morphs.Sheep.skill", "&eLeft-Click&7 to: &aChange Colors");
+		addMessage("Morphs.Sheep.skill", "&eLeft-Click&7 to: &aChange Color");
 		addMessage("Morphs.Mooshroom.name", "&c&lMooshroom");
 		addMessage("Morphs.Mooshroom.skill", "&eCrouch&7 to: &aSoup Throw");
 		addMessage("Morphs.Villager.name", "&a&lVillager");
 		addMessage("Morphs.Villager.skill", "&eLeft-Click&7 to: &aEmerald Throw");
 		addMessage("Morphs.Witch.name", "&5&lWitch");
-		addMessage("Morphs.Witch.skill", "&eLEft-Click&7 to: &aPotion Throw");
+		addMessage("Morphs.Witch.skill", "&eLeft-Click&7 to: &aPotion Throw");
 		addMessage("Morphs.PolarBear.name", "&f&lPolarBear");
 		addMessage("Morphs.PolarBear.skill", "&eLeft-Click&7 to: &aBlizzard");
 		addMessage("Morphs.Llama.name", "&3&lLlama");

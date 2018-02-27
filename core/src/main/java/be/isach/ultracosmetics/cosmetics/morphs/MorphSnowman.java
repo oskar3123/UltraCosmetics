@@ -3,6 +3,10 @@ package be.isach.ultracosmetics.cosmetics.morphs;
 import be.isach.ultracosmetics.UltraCosmetics;
 import be.isach.ultracosmetics.cosmetics.type.MorphType;
 import be.isach.ultracosmetics.player.UltraPlayer;
+import org.bukkit.entity.Snowball;
+import org.bukkit.event.EventHandler;
+import org.bukkit.event.block.Action;
+import org.bukkit.event.player.PlayerInteractEvent;
 
 /**
  * Represents an instance of a snowman morph summoned by a player.
@@ -18,7 +22,7 @@ public class MorphSnowman extends Morph {
 		super(owner, MorphType.valueOf("snowman"), ultraCosmetics);
 	}
 
-	/*@EventHandler
+	@EventHandler
 	public void onLeftClick(PlayerInteractEvent event) {
 		if ((event.getAction() == Action.LEFT_CLICK_AIR
 		     || event.getAction() == Action.LEFT_CLICK_BLOCK) && event.getPlayer() == getPlayer()) {
@@ -27,7 +31,7 @@ public class MorphSnowman extends Morph {
 			event.getPlayer().launchProjectile(Snowball.class);
 			coolDown = System.currentTimeMillis() + 500;
 		}
-	}*/
+	}
 
 	@Override
 	public void onUpdate() {

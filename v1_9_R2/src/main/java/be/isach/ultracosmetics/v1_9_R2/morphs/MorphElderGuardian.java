@@ -5,10 +5,21 @@ import be.isach.ultracosmetics.cosmetics.morphs.Morph;
 import be.isach.ultracosmetics.cosmetics.type.MorphType;
 import be.isach.ultracosmetics.player.UltraPlayer;
 import be.isach.ultracosmetics.util.EntitySpawningManager;
+import be.isach.ultracosmetics.v1_9_R2.customentities.CustomEntityFirework;
 import be.isach.ultracosmetics.v1_9_R2.customentities.CustomGuardian;
 import net.minecraft.server.v1_9_R2.World;
+import org.bukkit.Bukkit;
+import org.bukkit.Color;
+import org.bukkit.FireworkEffect;
 import org.bukkit.Location;
 import org.bukkit.craftbukkit.v1_9_R2.CraftWorld;
+import org.bukkit.craftbukkit.v1_9_R2.entity.CraftEntity;
+import org.bukkit.entity.ArmorStand;
+import org.bukkit.event.EventHandler;
+import org.bukkit.event.block.Action;
+import org.bukkit.event.entity.EntityDamageByEntityEvent;
+import org.bukkit.event.player.PlayerInteractEvent;
+import org.bukkit.util.Vector;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -31,7 +42,7 @@ public class MorphElderGuardian extends Morph {
 		
 	}
 	
-	/*@EventHandler
+	@EventHandler
 	public void onInteract(PlayerInteractEvent event) {
 		if ((event.getAction() == Action.LEFT_CLICK_AIR
 		     || event.getAction() == Action.LEFT_CLICK_BLOCK) && !cooldown
@@ -76,17 +87,17 @@ public class MorphElderGuardian extends Morph {
 			Location current = FROM.clone();
 			
 			for (int i = 0; i < 10; i++) {
-				for (Entity entity : current.getWorld().getNearbyEntities(current, 4.5, 4.5, 4.5))
+				/*for (Entity entity : current.getWorld().getNearbyEntities(current, 4.5, 4.5, 4.5))
 					if (entity instanceof LivingEntity
 					    && entity != getPlayer())
-						MathUtils.applyVelocity(entity, new Vector(0, 0.5d, 0));
+						MathUtils.applyVelocity(entity, new Vector(0, 0.5d, 0));*/
 				current.add(vector);
 			}
 			
 			armorStand.remove();
 			customGuardian.target(null);
 		}, 25);
-	}*/
+	}
 	
 	@Override
 	public void onClear() {

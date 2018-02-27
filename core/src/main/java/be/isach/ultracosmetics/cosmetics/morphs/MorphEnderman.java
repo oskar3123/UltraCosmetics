@@ -11,6 +11,8 @@ import be.isach.ultracosmetics.player.UltraPlayer;
  * @since 08-26-2015
  */
 public class MorphEnderman extends Morph {
+	//TODO Fix non OP enderman skill
+
 	private boolean cooldown;
 
 	public MorphEnderman(UltraPlayer owner, UltraCosmetics ultraCosmetics) {

@@ -5,10 +5,24 @@ import be.isach.ultracosmetics.cosmetics.morphs.Morph;
 import be.isach.ultracosmetics.cosmetics.type.MorphType;
 import be.isach.ultracosmetics.player.UltraPlayer;
 import be.isach.ultracosmetics.util.EntitySpawningManager;
+import be.isach.ultracosmetics.util.MathUtils;
+import be.isach.ultracosmetics.v1_8_R1.customentities.CustomEntityFirework;
 import be.isach.ultracosmetics.v1_8_R1.customentities.CustomGuardian;
 import net.minecraft.server.v1_8_R1.World;
+import org.bukkit.Bukkit;
+import org.bukkit.Color;
+import org.bukkit.FireworkEffect;
 import org.bukkit.Location;
 import org.bukkit.craftbukkit.v1_8_R1.CraftWorld;
+import org.bukkit.craftbukkit.v1_8_R1.entity.CraftEntity;
+import org.bukkit.entity.ArmorStand;
+import org.bukkit.entity.Entity;
+import org.bukkit.entity.LivingEntity;
+import org.bukkit.event.EventHandler;
+import org.bukkit.event.block.Action;
+import org.bukkit.event.entity.EntityDamageByEntityEvent;
+import org.bukkit.event.player.PlayerInteractEvent;
+import org.bukkit.util.Vector;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -30,7 +44,7 @@ public class MorphElderGuardian extends Morph {
 		super(owner, MorphType.valueOf("elderguardian"), ultraCosmetics);
 	}
 	
-	/*@EventHandler
+	@EventHandler
 	public void onInteract(PlayerInteractEvent event) {
 		if ((event.getAction() == Action.LEFT_CLICK_AIR
 		     || event.getAction() == Action.LEFT_CLICK_BLOCK) && !cooldown
@@ -46,9 +60,9 @@ public class MorphElderGuardian extends Morph {
 		if (((CraftEntity) event.getDamager()).getHandle() == customGuardian
 		    && event.getEntity() == getPlayer())
 			event.setCancelled(true);
-	}*/
+	}
 	
-	/*private void shootLaser() {
+	private void shootLaser() {
 		if (customGuardian == null)
 			return;
 		
@@ -75,16 +89,16 @@ public class MorphElderGuardian extends Morph {
 			Location current = FROM.clone();
 			
 			for (int i = 0; i < 10; i++) {
-				for (Entity entity : armorStand.getNearbyEntities(4.5, 4.5, 4.5))
+				/*for (Entity entity : armorStand.getNearbyEntities(4.5, 4.5, 4.5))
 					if (entity instanceof LivingEntity
 					    && entity != getPlayer())
-						MathUtils.applyVelocity(entity, new Vector(0, 0.5d, 0));
+						MathUtils.applyVelocity(entity, new Vector(0, 0.5d, 0));*/
 				current.add(vector);
 			}
 			armorStand.remove();
 			customGuardian.target(null);
 		}, 25);
-	}*/
+	}
 	
 	@Override
 	protected void onEquip() {

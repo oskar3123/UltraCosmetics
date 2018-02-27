@@ -11,6 +11,7 @@ import be.isach.ultracosmetics.player.UltraPlayer;
  * @since 08-26-2015
  */
 public class MorphSlime extends Morph {
+	//TODO Fix non OP slime skill
 	private boolean cooldown;
 
 	public MorphSlime(UltraPlayer owner, UltraCosmetics ultraCosmetics) {

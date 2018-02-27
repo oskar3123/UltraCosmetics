@@ -1,9 +1,15 @@
 package be.isach.ultracosmetics.cosmetics.morphs;
 
 import be.isach.ultracosmetics.UltraCosmetics;
+import be.isach.ultracosmetics.UltraCosmeticsData;
 import be.isach.ultracosmetics.cosmetics.type.MorphType;
 import be.isach.ultracosmetics.player.UltraPlayer;
+import org.bukkit.Bukkit;
 import org.bukkit.Location;
+import org.bukkit.Material;
+import org.bukkit.event.EventHandler;
+import org.bukkit.event.block.Action;
+import org.bukkit.event.player.PlayerInteractEvent;
 import org.bukkit.util.Vector;
 
 /**
@@ -22,7 +28,7 @@ public class MorphPolarBear extends Morph {
 		super(owner, MorphType.valueOf("polarbear"), ultraCosmetics);
 	}
 
-	/*@EventHandler
+	@EventHandler
 	public void onLeftClick(PlayerInteractEvent event) {
 		if ((event.getAction() == Action.LEFT_CLICK_AIR || event.getAction() == Action.LEFT_CLICK_BLOCK)
 				&& event.getPlayer() == getPlayer()) {
@@ -35,11 +41,11 @@ public class MorphPolarBear extends Morph {
 			active = true;
 			Bukkit.getScheduler().runTaskLater(getUltraCosmetics(), () -> active = false, 40);
 		}
-	}*/
+	}
 
 	@Override
 	public void onUpdate() {
-		/*if (active) {
+		if (active) {
 			if (location.getBlock().getType() != Material.AIR && location.getBlock().getType().isSolid()) {
 				location.add(0, 1, 0);
 			}
@@ -58,14 +64,14 @@ public class MorphPolarBear extends Morph {
 		} else {
 			location = null;
 			vector = null;
-		}*/
+		}
 	}
 
 	@Override
 	protected void onClear() {
-		/*active = false;
+		active = false;
 		if (getOwner() != null && getPlayer() != null) {
 			UltraCosmeticsData.get().getVersionManager().getEntityUtil().clearBlizzard(getPlayer());
-		}*/
+		}
 	}
 }
