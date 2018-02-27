@@ -285,7 +285,7 @@ public class MessageManager {
 		addMessage("Morphs.Llama.name", "&3&lLlama");
 		addMessage("Morphs.Llama.skill", "&eLeft-Click&7 to: &aSpit");
 		addMessage("Morphs.Parrot.name", "&a&lParrot");
-		addMessage("Morphs.Parrot.skill", "&eDouble Jump&7 to: &aFlap");
+		addMessage("Morphs.Parrot.skill", "&eLeft-Click&7 to: &aFlap");
 
 		//HATS
 		addMessage("Hats.Equip", "%prefix% &9You equipped %hatname% &9hat!");

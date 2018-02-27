@@ -40,10 +40,10 @@ public class MorphMooshroom extends Morph {
 		if (event.getPlayer() == getPlayer() && !inCooldown) {
 			inCooldown = true;
 			Bukkit.getScheduler().runTaskLaterAsynchronously(getUltraCosmetics(), () -> inCooldown = false, 200);
-			for (Entity ent : getPlayer().getNearbyEntities(3, 3, 3)) {
+			/*for (Entity ent : getPlayer().getNearbyEntities(3, 3, 3)) {
 				if (ent instanceof Player || ent instanceof Creature)
 					MathUtils.applyVelocity(ent, ent.getLocation().toVector().subtract(getPlayer().getLocation().toVector()).setY(1));
-			}
+			}*/
 			final List<Entity> items = new ArrayList<>();
 			for (int i = 0; i < 20; i++) {
 				Item soup = getPlayer().getWorld().dropItem(getPlayer().getLocation().add(Math.random() * 5.0D - 2.5D, Math.random() * 3.0D, Math.random() * 5.0D - 2.5D), ItemFactory
