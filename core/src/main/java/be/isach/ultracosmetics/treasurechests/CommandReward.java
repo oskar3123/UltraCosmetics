@@ -2,9 +2,10 @@ package be.isach.ultracosmetics.treasurechests;
 
 import be.isach.ultracosmetics.UltraCosmeticsData;
 import be.isach.ultracosmetics.util.CustomConfiguration;
-import java.util.List;
 import org.bukkit.ChatColor;
 import org.bukkit.Material;
+
+import java.util.List;
 
 /**
  * A command reward.

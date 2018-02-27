@@ -7,11 +7,7 @@ import be.isach.ultracosmetics.player.UltraPlayer;
 import be.isach.ultracosmetics.util.ItemFactory;
 import org.bukkit.Bukkit;
 import org.bukkit.Material;
-import org.bukkit.entity.Item;
 import org.bukkit.entity.Snowman;
-import org.bukkit.util.Vector;
-
-import java.util.Random;
 
 /**
  * Represents an instance of a snowman pet summoned by a player.

@@ -3,17 +3,10 @@ package be.isach.ultracosmetics.cosmetics.morphs;
 import be.isach.ultracosmetics.UltraCosmetics;
 import be.isach.ultracosmetics.cosmetics.type.MorphType;
 import be.isach.ultracosmetics.player.UltraPlayer;
-import me.libraryaddict.disguise.disguisetypes.watchers.LlamaWatcher;
-import org.bukkit.entity.EntityType;
-import org.bukkit.entity.Llama;
 import org.bukkit.entity.LlamaSpit;
-import org.bukkit.entity.Player;
-import org.bukkit.entity.Snowball;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.block.Action;
 import org.bukkit.event.entity.EntityDamageByEntityEvent;
-import org.bukkit.event.entity.EntityDamageEvent;
-import org.bukkit.event.entity.ProjectileHitEvent;
 import org.bukkit.event.player.PlayerInteractEvent;
 
 /**

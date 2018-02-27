@@ -5,17 +5,7 @@ import be.isach.ultracosmetics.cosmetics.pets.IPetCustomEntity;
 import be.isach.ultracosmetics.util.Particles;
 import be.isach.ultracosmetics.util.UtilParticles;
 import be.isach.ultracosmetics.v1_12_R1.pets.CustomEntityPet;
-import net.minecraft.server.v1_12_R1.Block;
-import net.minecraft.server.v1_12_R1.BlockPosition;
-import net.minecraft.server.v1_12_R1.Blocks;
-import net.minecraft.server.v1_12_R1.DamageSource;
-import net.minecraft.server.v1_12_R1.EntityZombie;
-import net.minecraft.server.v1_12_R1.EnumItemSlot;
-import net.minecraft.server.v1_12_R1.ItemStack;
-import net.minecraft.server.v1_12_R1.LocaleI18n;
-import net.minecraft.server.v1_12_R1.SoundEffect;
-import net.minecraft.server.v1_12_R1.SoundEffects;
-import net.minecraft.server.v1_12_R1.World;
+import net.minecraft.server.v1_12_R1.*;
 import org.bukkit.entity.Zombie;
 
 /**

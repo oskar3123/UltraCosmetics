@@ -13,7 +13,6 @@ import org.bukkit.entity.Wolf;
 import org.bukkit.util.Vector;
 
 import java.util.Random;
-import java.util.UUID;
 
 /**
  * Represents an instance of a dog pet summoned by a player.

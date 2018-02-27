@@ -3,21 +3,6 @@ package be.isach.ultracosmetics.cosmetics.morphs;
 import be.isach.ultracosmetics.UltraCosmetics;
 import be.isach.ultracosmetics.cosmetics.type.MorphType;
 import be.isach.ultracosmetics.player.UltraPlayer;
-import org.bukkit.Bukkit;
-import org.bukkit.Color;
-import org.bukkit.FireworkEffect;
-import org.bukkit.GameMode;
-import org.bukkit.Location;
-import org.bukkit.Material;
-import org.bukkit.block.Block;
-import org.bukkit.entity.Firework;
-import org.bukkit.event.EventHandler;
-import org.bukkit.event.entity.EntityDamageEvent;
-import org.bukkit.event.player.PlayerToggleFlightEvent;
-import org.bukkit.inventory.meta.FireworkMeta;
-
-import java.util.ArrayList;
-import java.util.Set;
 
 /**
  * Represents an instance of an enderman morph summoned by a player.
@@ -35,10 +20,10 @@ public class MorphEnderman extends Morph {
 	@Override
 	protected void onEquip() {
 		super.onEquip();
-		getPlayer().setAllowFlight(true);
+		//getPlayer().setAllowFlight(true);
 	}
 
-	@EventHandler
+	/*@EventHandler
 	public void onPlayerToggleFligh(PlayerToggleFlightEvent event) {
 		if (event.getPlayer() == getPlayer()
 		    && event.getPlayer().getGameMode() != GameMode.CREATIVE
@@ -67,13 +52,13 @@ public class MorphEnderman extends Morph {
 		    && getOwner().getCurrentMorph() == this) {
 			event.setCancelled(true);
 		}
-	}
+	}*/
 
 	@Override
 	public void onUpdate() {
 	}
 
-	public static FireworkEffect getRandomFireworkEffect() {
+	/*public static FireworkEffect getRandomFireworkEffect() {
 		FireworkEffect.Builder builder = FireworkEffect.builder();
 		return builder.flicker(false).trail(false).with(FireworkEffect.Type.BALL_LARGE).withColor(Color.fromRGB(0, 0, 0)).withFade(Color.fromRGB(0, 0, 0)).build();
 	}
@@ -92,12 +77,12 @@ public class MorphEnderman extends Morph {
 			for (Firework f : fireworks)
 				f.detonate();
 		}, 2);
-	}
+	}*/
 
 	@Override
 	public void onClear() {
-		if (getPlayer().getGameMode() != GameMode.CREATIVE) {
+		/*if (getPlayer().getGameMode() != GameMode.CREATIVE) {
 			getPlayer().setAllowFlight(false);
-		}
+		}*/
 	}
 }

@@ -1,18 +1,8 @@
 package be.isach.ultracosmetics.cosmetics.morphs;
 
 import be.isach.ultracosmetics.UltraCosmetics;
-import be.isach.ultracosmetics.UltraCosmeticsData;
 import be.isach.ultracosmetics.cosmetics.type.MorphType;
 import be.isach.ultracosmetics.player.UltraPlayer;
-import be.isach.ultracosmetics.util.ItemFactory;
-import be.isach.ultracosmetics.util.SoundUtil;
-import be.isach.ultracosmetics.util.Sounds;
-import org.bukkit.Bukkit;
-import org.bukkit.Material;
-import org.bukkit.entity.Item;
-import org.bukkit.event.EventHandler;
-import org.bukkit.event.block.Action;
-import org.bukkit.event.player.PlayerInteractEvent;
 
 /**
  * Represents an instance of a villager morph summoned by a player.
@@ -27,7 +17,7 @@ public class MorphVillager extends Morph {
 		super(owner, MorphType.valueOf("villager"), ultraCosmetics);
 	}
 
-	@EventHandler
+	/*@EventHandler
 	public void onLeftClick(PlayerInteractEvent event) {
 		if ((event.getAction() == Action.LEFT_CLICK_AIR
 				|| event.getAction() == Action.LEFT_CLICK_BLOCK) && event.getPlayer() == getPlayer()) {
@@ -40,7 +30,7 @@ public class MorphVillager extends Morph {
 			coolDown = System.currentTimeMillis() + 5000;
 			Bukkit.getScheduler().runTaskLater(getUltraCosmetics(), emerald::remove, 80);
 		}
-	}
+	}*/
 
 	@Override
 	public void onUpdate() {

@@ -8,6 +8,8 @@ import be.isach.ultracosmetics.util.SoundUtil;
 import be.isach.ultracosmetics.util.Sounds;
 import org.bukkit.GameMode;
 import org.bukkit.event.EventHandler;
+import org.bukkit.event.block.Action;
+import org.bukkit.event.player.PlayerInteractEvent;
 import org.bukkit.event.player.PlayerToggleFlightEvent;
 import org.bukkit.util.Vector;
 
@@ -19,14 +21,10 @@ import org.bukkit.util.Vector;
  */
 public class MorphBat extends Morph {
 
+    private long coolDown = 0;
+
 	public MorphBat(UltraPlayer owner, UltraCosmetics ultraCosmetics) {
 		super(owner, MorphType.valueOf("bat"), ultraCosmetics);
-	}
-
-	@Override
-	protected void onEquip() {
-		super.onEquip();
-		getPlayer().setAllowFlight(true);
 	}
 
 	@Override
@@ -34,23 +32,17 @@ public class MorphBat extends Morph {
 	}
 
 	@EventHandler
-	public void onPlayerToggleFligh(PlayerToggleFlightEvent event) {
-		if (event.getPlayer() == getPlayer()
-		    && event.getPlayer().getGameMode() != GameMode.CREATIVE
-		    && !event.getPlayer().isFlying()) {
-			Vector v = event.getPlayer().getLocation().getDirection();
-			v.setY(0.75);
-			MathUtils.applyVelocity(getPlayer(), v);
-			event.getPlayer().setFlying(false);
-			event.setCancelled(true);
+	public void onLeftClick(PlayerInteractEvent event) {
+        if ((event.getAction() == Action.LEFT_CLICK_AIR
+                || event.getAction() == Action.LEFT_CLICK_BLOCK) && event.getPlayer() == getPlayer()) {
+            if (coolDown > System.currentTimeMillis()) return;
+            event.setCancelled(true);
 			SoundUtil.playSound(getPlayer(), Sounds.BAT_LOOP, 0.4f, 1.0f);
+            coolDown = System.currentTimeMillis() + 500;
 		}
 	}
 
 	@Override
 	public void onClear() {
-		if (getPlayer().getGameMode() != GameMode.CREATIVE) {
-			getPlayer().setAllowFlight(false);
-		}
 	}
 }

@@ -1,13 +1,7 @@
 package be.isach.ultracosmetics.command;
 
 import be.isach.ultracosmetics.UltraCosmetics;
-import be.isach.ultracosmetics.command.subcommands.SubCommandClear;
-import be.isach.ultracosmetics.command.subcommands.SubCommandGadgets;
-import be.isach.ultracosmetics.command.subcommands.SubCommandGive;
-import be.isach.ultracosmetics.command.subcommands.SubCommandMenu;
-import be.isach.ultracosmetics.command.subcommands.SubCommandSelfView;
-import be.isach.ultracosmetics.command.subcommands.SubCommandToggle;
-import be.isach.ultracosmetics.command.subcommands.SubCommandTreasure;
+import be.isach.ultracosmetics.command.subcommands.*;
 import be.isach.ultracosmetics.config.MessageManager;
 import be.isach.ultracosmetics.util.MathUtils;
 import org.bukkit.ChatColor;

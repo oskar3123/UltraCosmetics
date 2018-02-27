@@ -3,14 +3,6 @@ package be.isach.ultracosmetics.cosmetics.morphs;
 import be.isach.ultracosmetics.UltraCosmetics;
 import be.isach.ultracosmetics.cosmetics.type.MorphType;
 import be.isach.ultracosmetics.player.UltraPlayer;
-import be.isach.ultracosmetics.util.MathUtils;
-import be.isach.ultracosmetics.util.SoundUtil;
-import be.isach.ultracosmetics.util.Sounds;
-import org.bukkit.Bukkit;
-import org.bukkit.entity.Creature;
-import org.bukkit.entity.Entity;
-import org.bukkit.entity.Player;
-import org.bukkit.util.Vector;
 
 /**
  * Represents an instance of a pig morph summoned by a player.
@@ -27,7 +19,7 @@ public class MorphPig extends Morph {
 
 	@Override
 	public void onUpdate() {
-		for (Entity ent : getPlayer().getNearbyEntities(0.2, 0.2, 0.2)) {
+		/*for (Entity ent : getPlayer().getNearbyEntities(0.2, 0.2, 0.2)) {
 			if (ent instanceof Creature || ent instanceof Player) {
 				if (!ent.hasMetadata("Mount")
 				    && !ent.hasMetadata("Pet")
@@ -46,7 +38,7 @@ public class MorphPig extends Morph {
 					MathUtils.applyVelocity(getPlayer(), vPig.multiply(0.75));
 				}
 			}
-		}
+		}*/
 	}
 
 	@Override

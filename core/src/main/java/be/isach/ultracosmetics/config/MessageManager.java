@@ -247,7 +247,7 @@ public class MessageManager {
 		
 		//MORPHS
 		addMessage("Morphs.Blaze.name", "&6&lBlaze");
-		addMessage("Morphs.Blaze.skill", "&eCrouch&7 to: &aFly");
+		addMessage("Morphs.Blaze.skill", "&eLeft-Click&7 to: &aFizz");
 		addMessage("Morphs.Chicken.name", "&f&lChicken");
 		addMessage("Morphs.Chicken.skill", "&eCrouch&7 to: &aLay eggs");
 		addMessage("Morphs.Slime.name", "&a&lSlime");
@@ -257,7 +257,7 @@ public class MessageManager {
 		addMessage("Morphs.Enderman.name", "&5&lEnderman");
 		addMessage("Morphs.Enderman.skill", "&eDouble Jump&7 to: &aTeleport");
 		addMessage("Morphs.Bat.name", "&8&lBat");
-		addMessage("Morphs.Bat.skill", "&eDouble Jump&7 to: &aFlap");
+		addMessage("Morphs.Bat.skill", "&eLeft-Click&7 to: &aFlap");
 		addMessage("Morphs.Creeper.name", "&a&lCreeper");
 		addMessage("Morphs.Creeper.skill", "&eCrouch&7 to: &aDetonate");
 		addMessage("Morphs.Creeper.charging", "&a&lCharging: %chargelevel%/100");

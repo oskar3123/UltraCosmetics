@@ -3,16 +3,7 @@ package be.isach.ultracosmetics.cosmetics.morphs;
 import be.isach.ultracosmetics.UltraCosmetics;
 import be.isach.ultracosmetics.cosmetics.type.MorphType;
 import be.isach.ultracosmetics.player.UltraPlayer;
-import org.bukkit.entity.ThrownPotion;
-import org.bukkit.event.EventHandler;
-import org.bukkit.event.block.Action;
-import org.bukkit.event.player.PlayerInteractEvent;
-import org.bukkit.potion.PotionEffect;
-import org.bukkit.potion.PotionEffectType;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
 import java.util.Random;
 
 /**
@@ -29,7 +20,7 @@ public class MorphWitch extends Morph {
 		super(owner, MorphType.valueOf("witch"), ultraCosmetics);
 	}
 
-	@EventHandler
+	/*@EventHandler
 	public void onLeftClick(PlayerInteractEvent event) {
 		if ((event.getAction() == Action.LEFT_CLICK_AIR || event.getAction() == Action.LEFT_CLICK_BLOCK)
 				&& event.getPlayer() == getPlayer()) {
@@ -38,7 +29,7 @@ public class MorphWitch extends Morph {
 			getPlayer().launchProjectile(ThrownPotion.class);
 			coolDown = System.currentTimeMillis() + 2000;
 		}
-	}
+	}*/
 
 	@Override
 	public void onUpdate() {

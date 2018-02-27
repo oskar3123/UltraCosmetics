@@ -4,15 +4,7 @@ import be.isach.ultracosmetics.UltraCosmeticsData;
 import be.isach.ultracosmetics.cosmetics.pets.IPetCustomEntity;
 import be.isach.ultracosmetics.util.Particles;
 import be.isach.ultracosmetics.util.UtilParticles;
-import net.minecraft.server.v1_9_R2.Block;
-import net.minecraft.server.v1_9_R2.BlockPosition;
-import net.minecraft.server.v1_9_R2.Blocks;
-import net.minecraft.server.v1_9_R2.EntityZombie;
-import net.minecraft.server.v1_9_R2.EnumItemSlot;
-import net.minecraft.server.v1_9_R2.ItemStack;
-import net.minecraft.server.v1_9_R2.SoundEffect;
-import net.minecraft.server.v1_9_R2.SoundEffects;
-import net.minecraft.server.v1_9_R2.World;
+import net.minecraft.server.v1_9_R2.*;
 import org.bukkit.entity.Zombie;
 
 /**

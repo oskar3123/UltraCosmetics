@@ -1,23 +1,11 @@
 package be.isach.ultracosmetics.v1_11_R1.customentities;
 
-
-import net.minecraft.server.v1_11_R1.BiomeBase;
-import net.minecraft.server.v1_11_R1.Entity;
-import net.minecraft.server.v1_11_R1.EntityGuardian;
-import net.minecraft.server.v1_11_R1.EntityInsentient;
-import net.minecraft.server.v1_11_R1.EntitySlime;
-import net.minecraft.server.v1_11_R1.EntitySpider;
-import net.minecraft.server.v1_11_R1.EntityTypes;
-import net.minecraft.server.v1_11_R1.EntityZombie;
-import net.minecraft.server.v1_11_R1.MinecraftKey;
-import net.minecraft.server.v1_11_R1.RegistryID;
-import net.minecraft.server.v1_11_R1.RegistryMaterials;
+import net.minecraft.server.v1_11_R1.*;
 import org.bukkit.entity.EntityType;
 
 import java.lang.reflect.Field;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Map;
 
 /**
  * @author RadBuilder

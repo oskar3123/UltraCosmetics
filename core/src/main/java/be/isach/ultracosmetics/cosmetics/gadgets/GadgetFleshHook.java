@@ -18,7 +18,6 @@ import org.bukkit.util.Vector;
 
 import java.util.ArrayList;
 import java.util.Iterator;
-import java.util.UUID;
 
 /**
  * Represents an instance of a fleshhook gadget summoned by a player.

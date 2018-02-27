@@ -12,7 +12,6 @@ import org.bukkit.entity.Sheep;
 import org.bukkit.util.Vector;
 
 import java.util.Random;
-import java.util.UUID;
 
 /**
  * Represents an instance of a sheep pet summoned by a player.

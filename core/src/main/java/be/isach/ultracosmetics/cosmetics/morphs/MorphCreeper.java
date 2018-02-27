@@ -5,13 +5,10 @@ import be.isach.ultracosmetics.UltraCosmeticsData;
 import be.isach.ultracosmetics.config.MessageManager;
 import be.isach.ultracosmetics.cosmetics.type.MorphType;
 import be.isach.ultracosmetics.player.UltraPlayer;
-import be.isach.ultracosmetics.util.MathUtils;
-import be.isach.ultracosmetics.util.Particles;
-import be.isach.ultracosmetics.util.SoundUtil;
-import be.isach.ultracosmetics.util.Sounds;
-import be.isach.ultracosmetics.util.UtilParticles;
+import be.isach.ultracosmetics.util.*;
 import me.libraryaddict.disguise.DisguiseAPI;
 import me.libraryaddict.disguise.disguisetypes.MobDisguise;
+import me.libraryaddict.disguise.disguisetypes.TargetedDisguise;
 import me.libraryaddict.disguise.disguisetypes.watchers.CreeperWatcher;
 import org.bukkit.entity.Creature;
 import org.bukkit.entity.Entity;
@@ -44,6 +41,8 @@ public class MorphCreeper extends Morph {
 				if (!getOwner().canSeeSelfMorph())
 					disguise.setViewSelfDisguise(false);
 
+				setWatcherName();
+
 				DisguiseAPI.disguiseToAll(getPlayer(), disguise);
 				//  disguise.setShowName(true);
 			}
@@ -51,7 +50,7 @@ public class MorphCreeper extends Morph {
 				UtilParticles.display(Particles.EXPLOSION_HUGE, getPlayer().getLocation());
 				SoundUtil.playSound(getPlayer(), Sounds.EXPLODE, 1.4f, 1.5f);
 
-				for (Entity ent : getPlayer().getNearbyEntities(3, 3, 3)) {
+				/*for (Entity ent : getPlayer().getNearbyEntities(3, 3, 3)) {
 					if (ent instanceof Creature || ent instanceof Player) {
 						double dX = getPlayer().getLocation().getX() - ent.getLocation().getX();
 						double dY = getPlayer().getLocation().getY() - ent.getLocation().getY();
@@ -65,7 +64,7 @@ public class MorphCreeper extends Morph {
 						Vector vector = new Vector(X, Z, Y);
 						MathUtils.applyVelocity(ent, vector.multiply(1.3D).add(new Vector(0, 1.4D, 0)));
 					}
-				}
+				}*/
 				UltraCosmeticsData.get().getVersionManager().getActionBarUtil().sendActionMessage(getPlayer(), "");
 				charge = 0;
 				return;

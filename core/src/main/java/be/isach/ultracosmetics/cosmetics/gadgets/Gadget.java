@@ -9,18 +9,7 @@ import be.isach.ultracosmetics.cosmetics.Cosmetic;
 import be.isach.ultracosmetics.cosmetics.Updatable;
 import be.isach.ultracosmetics.cosmetics.type.GadgetType;
 import be.isach.ultracosmetics.player.UltraPlayer;
-import be.isach.ultracosmetics.util.ConfigUtils;
-import be.isach.ultracosmetics.util.InventoryUtils;
-import be.isach.ultracosmetics.util.ItemFactory;
-import be.isach.ultracosmetics.util.PlayerUtils;
-import be.isach.ultracosmetics.util.ServerVersion;
-import be.isach.ultracosmetics.util.SoundUtil;
-import be.isach.ultracosmetics.util.Sounds;
-import be.isach.ultracosmetics.util.TextUtil;
-import java.text.DecimalFormat;
-import java.text.DecimalFormatSymbols;
-import java.util.Locale;
-import java.util.UUID;
+import be.isach.ultracosmetics.util.*;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.Material;
@@ -41,6 +30,11 @@ import org.bukkit.inventory.EquipmentSlot;
 import org.bukkit.inventory.Inventory;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.scheduler.BukkitRunnable;
+
+import java.text.DecimalFormat;
+import java.text.DecimalFormatSymbols;
+import java.util.Locale;
+import java.util.UUID;
 
 /**
  * Represents an instance of a Gadget summoned by a player.

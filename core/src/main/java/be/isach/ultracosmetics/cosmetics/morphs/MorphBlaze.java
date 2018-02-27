@@ -3,13 +3,11 @@ package be.isach.ultracosmetics.cosmetics.morphs;
 import be.isach.ultracosmetics.UltraCosmetics;
 import be.isach.ultracosmetics.cosmetics.type.MorphType;
 import be.isach.ultracosmetics.player.UltraPlayer;
-import be.isach.ultracosmetics.util.Particles;
 import be.isach.ultracosmetics.util.SoundUtil;
 import be.isach.ultracosmetics.util.Sounds;
-import be.isach.ultracosmetics.util.UtilParticles;
 import org.bukkit.event.EventHandler;
-import org.bukkit.event.entity.EntityDamageEvent;
-import org.bukkit.event.player.PlayerKickEvent;
+import org.bukkit.event.block.Action;
+import org.bukkit.event.player.PlayerInteractEvent;
 
 /**
  * Represents an instance of a blaze morph summoned by a player.
@@ -19,37 +17,28 @@ import org.bukkit.event.player.PlayerKickEvent;
  */
 public class MorphBlaze extends Morph {
 
+	private long coolDown = 0;
+
 	public MorphBlaze(UltraPlayer owner, UltraCosmetics ultraCosmetics) {
 		super(owner, MorphType.valueOf("blaze"), ultraCosmetics);
 	}
 
 	@Override
 	public void onUpdate() {
-		if (getPlayer().isSneaking()) {
-			UtilParticles.display(Particles.FLAME, getPlayer().getLocation());
-			UtilParticles.display(Particles.LAVA, getPlayer().getLocation());
-			SoundUtil.playSound(getPlayer(), Sounds.FIZZ, 0.1f, 1.5f);
-			getPlayer().setVelocity(getPlayer().getEyeLocation().getDirection().multiply(1));
-		}
 	}
 
 	@EventHandler
-	public void onKick(PlayerKickEvent event) {
-		if (event.getPlayer() == getPlayer() && getOwner().getCurrentMorph() == this && event.getReason().contains("Flying")) {
+	public void onLeftClick(PlayerInteractEvent event) {
+		if ((event.getAction() == Action.LEFT_CLICK_AIR
+				|| event.getAction() == Action.LEFT_CLICK_BLOCK) && event.getPlayer() == getPlayer()) {
+			if (coolDown > System.currentTimeMillis()) return;
 			event.setCancelled(true);
+			SoundUtil.playSound(getPlayer(), Sounds.BAT_LOOP, 0.4f, 1.0f);
+			coolDown = System.currentTimeMillis() + 500;
 		}
 	}
 
 	@Override
 	protected void onClear() {
-	}
-
-	@EventHandler
-	public void onDamage(EntityDamageEvent event) {
-		if (event.getEntity() == getPlayer()
-		    && getOwner().getCurrentMorph() == this
-		    && event.getCause() == EntityDamageEvent.DamageCause.FALL) {
-			event.setCancelled(true);
-		}
 	}
 }

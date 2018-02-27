@@ -1,10 +1,6 @@
 package be.isach.ultracosmetics.v1_8_R3.pathfinders;
 
-import net.minecraft.server.v1_8_R3.EntityCreature;
-import net.minecraft.server.v1_8_R3.EntityLiving;
-import net.minecraft.server.v1_8_R3.PathfinderGoal;
-import net.minecraft.server.v1_8_R3.RandomPositionGenerator;
-import net.minecraft.server.v1_8_R3.Vec3D;
+import net.minecraft.server.v1_8_R3.*;
 
 /**
  * Created by sacha on 25/07/15.

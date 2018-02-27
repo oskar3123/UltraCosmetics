@@ -4,12 +4,7 @@ import be.isach.ultracosmetics.cosmetics.mounts.IMountCustomEntity;
 import be.isach.ultracosmetics.v1_10_R1.EntityBase;
 import be.isach.ultracosmetics.v1_10_R1.nms.WrapperEntityHuman;
 import be.isach.ultracosmetics.v1_10_R1.nms.WrapperEntityInsentient;
-import net.minecraft.server.v1_10_R1.EntityHuman;
-import net.minecraft.server.v1_10_R1.EntityInsentient;
-import net.minecraft.server.v1_10_R1.EntitySpider;
-import net.minecraft.server.v1_10_R1.LocaleI18n;
-import net.minecraft.server.v1_10_R1.MathHelper;
-import net.minecraft.server.v1_10_R1.World;
+import net.minecraft.server.v1_10_R1.*;
 
 /**
  * Project: UltraCosmetics

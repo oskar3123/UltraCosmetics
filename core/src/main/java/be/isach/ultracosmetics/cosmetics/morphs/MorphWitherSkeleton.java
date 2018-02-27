@@ -1,27 +1,8 @@
 package be.isach.ultracosmetics.cosmetics.morphs;
 
 import be.isach.ultracosmetics.UltraCosmetics;
-import be.isach.ultracosmetics.UltraCosmeticsData;
 import be.isach.ultracosmetics.cosmetics.type.MorphType;
 import be.isach.ultracosmetics.player.UltraPlayer;
-import be.isach.ultracosmetics.util.ItemFactory;
-import be.isach.ultracosmetics.util.MathUtils;
-import be.isach.ultracosmetics.util.SoundUtil;
-import be.isach.ultracosmetics.util.Sounds;
-import org.bukkit.Bukkit;
-import org.bukkit.Material;
-import org.bukkit.entity.Creature;
-import org.bukkit.entity.Entity;
-import org.bukkit.entity.Item;
-import org.bukkit.entity.Player;
-import org.bukkit.event.EventHandler;
-import org.bukkit.event.EventPriority;
-import org.bukkit.event.player.PlayerToggleSneakEvent;
-import org.bukkit.metadata.FixedMetadataValue;
-
-import java.util.ArrayList;
-import java.util.List;
-import java.util.UUID;
 
 /**
  * @author iSach
@@ -38,7 +19,7 @@ public class MorphWitherSkeleton extends Morph {
 	public void onUpdate() {
 	}
 
-	@EventHandler(priority = EventPriority.HIGHEST)
+	/*@EventHandler(priority = EventPriority.HIGHEST)
 	public void onSneak(PlayerToggleSneakEvent event) {
 		if (event.getPlayer() == getPlayer() && !inCooldown) {
 			inCooldown = true;
@@ -61,7 +42,7 @@ public class MorphWitherSkeleton extends Morph {
 			}, 50);
 			SoundUtil.playSound(getPlayer(), Sounds.SKELETON_HURT, 0.4f, (float) Math.random() + 1f);
 		}
-	}
+	}*/
 
 	@Override
 	protected void onClear() {

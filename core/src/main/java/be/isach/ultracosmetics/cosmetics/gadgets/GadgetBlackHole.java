@@ -18,8 +18,6 @@ import org.bukkit.potion.PotionEffect;
 import org.bukkit.potion.PotionEffectType;
 import org.bukkit.util.Vector;
 
-import java.util.UUID;
-
 /**
  * Represents an instance of a blackhole gadget summoned by a player.
  *

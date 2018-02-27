@@ -3,15 +3,7 @@ package be.isach.ultracosmetics.util;
 import be.isach.ultracosmetics.UltraCosmetics;
 import be.isach.ultracosmetics.command.SubCommand;
 import be.isach.ultracosmetics.cosmetics.suits.ArmorSlot;
-import be.isach.ultracosmetics.cosmetics.type.CosmeticType;
-import be.isach.ultracosmetics.cosmetics.type.EmoteType;
-import be.isach.ultracosmetics.cosmetics.type.GadgetType;
-import be.isach.ultracosmetics.cosmetics.type.HatType;
-import be.isach.ultracosmetics.cosmetics.type.MorphType;
-import be.isach.ultracosmetics.cosmetics.type.MountType;
-import be.isach.ultracosmetics.cosmetics.type.ParticleEffectType;
-import be.isach.ultracosmetics.cosmetics.type.PetType;
-import be.isach.ultracosmetics.cosmetics.type.SuitType;
+import be.isach.ultracosmetics.cosmetics.type.*;
 
 import java.io.File;
 import java.io.FileNotFoundException;

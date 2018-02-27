@@ -1,9 +1,9 @@
 name: UltraCosmetics
-version: 2.5.0
+version: 2.4.11.oskar3123fix2
 author: iSach
 load: POSTWORLD
 main: be.isach.ultracosmetics.UltraCosmetics
-softdepend: [LibsDisguises, Vault, PlaceholderAPI]
+softdepend: [LibsDisguises, Vault, PlaceholderAPI, PlayerPoints]
 commands:
   ultracosmetics:
     aliases: [uc, cosmetics]
@@ -20,9 +20,12 @@ permissions:
       - ultracosmetics.suits.*
       - ultracosmetics.openmenu
       - ultracosmetics.receivechest
+      - ultracosmetics.treasurechests.buykey
   ultracosmetics.openmenu:
     default: true
   ultracosmetics.receivechest:
+    default: true
+  ultracosmetics.treasurechests.buykey:
     default: true
   ultracosmetics.command.*:
     children:

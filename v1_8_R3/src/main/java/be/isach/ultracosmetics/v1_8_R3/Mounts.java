@@ -1,11 +1,7 @@
 package be.isach.ultracosmetics.v1_8_R3;
 
 import be.isach.ultracosmetics.cosmetics.mounts.Mount;
-import be.isach.ultracosmetics.v1_8_R3.mount.MountInfernalHorror;
-import be.isach.ultracosmetics.v1_8_R3.mount.MountRudolph;
-import be.isach.ultracosmetics.v1_8_R3.mount.MountSlime;
-import be.isach.ultracosmetics.v1_8_R3.mount.MountSpider;
-import be.isach.ultracosmetics.v1_8_R3.mount.MountWalkingDead;
+import be.isach.ultracosmetics.v1_8_R3.mount.*;
 import be.isach.ultracosmetics.version.IMounts;
 import org.bukkit.entity.EntityType;
 

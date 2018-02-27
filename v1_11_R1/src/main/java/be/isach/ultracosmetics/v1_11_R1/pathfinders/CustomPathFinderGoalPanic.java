@@ -1,10 +1,6 @@
 package be.isach.ultracosmetics.v1_11_R1.pathfinders;
 
-import net.minecraft.server.v1_11_R1.EntityCreature;
-import net.minecraft.server.v1_11_R1.EntityLiving;
-import net.minecraft.server.v1_11_R1.PathfinderGoal;
-import net.minecraft.server.v1_11_R1.RandomPositionGenerator;
-import net.minecraft.server.v1_11_R1.Vec3D;
+import net.minecraft.server.v1_11_R1.*;
 
 /**
  * @author RadBuilder

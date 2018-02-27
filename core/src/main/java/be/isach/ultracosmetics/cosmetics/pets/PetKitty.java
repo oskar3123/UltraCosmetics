@@ -7,12 +7,7 @@ import be.isach.ultracosmetics.player.UltraPlayer;
 import be.isach.ultracosmetics.util.ItemFactory;
 import org.bukkit.Bukkit;
 import org.bukkit.Material;
-import org.bukkit.entity.Item;
 import org.bukkit.entity.Ocelot;
-import org.bukkit.util.Vector;
-
-import java.util.Random;
-import java.util.UUID;
 
 /**
  * Represents an instance of a kitten pet summoned by a player.

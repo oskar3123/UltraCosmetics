@@ -1,12 +1,7 @@
 package be.isach.ultracosmetics.v1_11_R1;
 
 import be.isach.ultracosmetics.version.AAnvilGUI;
-import net.minecraft.server.v1_11_R1.BlockPosition;
-import net.minecraft.server.v1_11_R1.ChatMessage;
-import net.minecraft.server.v1_11_R1.ContainerAnvil;
-import net.minecraft.server.v1_11_R1.EntityHuman;
-import net.minecraft.server.v1_11_R1.EntityPlayer;
-import net.minecraft.server.v1_11_R1.PacketPlayOutOpenWindow;
+import net.minecraft.server.v1_11_R1.*;
 import org.bukkit.craftbukkit.v1_11_R1.entity.CraftPlayer;
 import org.bukkit.entity.Player;
 

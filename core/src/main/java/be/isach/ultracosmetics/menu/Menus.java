@@ -1,15 +1,7 @@
 package be.isach.ultracosmetics.menu;
 
 import be.isach.ultracosmetics.UltraCosmetics;
-import be.isach.ultracosmetics.menu.menus.MenuEmotes;
-import be.isach.ultracosmetics.menu.menus.MenuGadgets;
-import be.isach.ultracosmetics.menu.menus.MenuHats;
-import be.isach.ultracosmetics.menu.menus.MenuMain;
-import be.isach.ultracosmetics.menu.menus.MenuMorphs;
-import be.isach.ultracosmetics.menu.menus.MenuMounts;
-import be.isach.ultracosmetics.menu.menus.MenuParticleEffects;
-import be.isach.ultracosmetics.menu.menus.MenuPets;
-import be.isach.ultracosmetics.menu.menus.MenuSuits;
+import be.isach.ultracosmetics.menu.menus.*;
 
 /**
  * Stores menus.

@@ -3,14 +3,6 @@ package be.isach.ultracosmetics.cosmetics.morphs;
 import be.isach.ultracosmetics.UltraCosmetics;
 import be.isach.ultracosmetics.cosmetics.type.MorphType;
 import be.isach.ultracosmetics.player.UltraPlayer;
-import be.isach.ultracosmetics.util.SoundUtil;
-import be.isach.ultracosmetics.util.Sounds;
-import me.libraryaddict.disguise.disguisetypes.watchers.SheepWatcher;
-import org.bukkit.Bukkit;
-import org.bukkit.DyeColor;
-import org.bukkit.event.EventHandler;
-import org.bukkit.event.block.Action;
-import org.bukkit.event.player.PlayerInteractEvent;
 
 import java.util.Random;
 
@@ -29,7 +21,7 @@ public class MorphSheep extends Morph {
 		super(owner, MorphType.valueOf("sheep"), ultraCosmetics);
 	}
 
-	@EventHandler
+	/*@EventHandler
 	public void onLeftClick(PlayerInteractEvent event) {
 		if ((event.getAction() == Action.LEFT_CLICK_AIR
 				|| event.getAction() == Action.LEFT_CLICK_BLOCK) && event.getPlayer() == getPlayer()) {
@@ -48,7 +40,7 @@ public class MorphSheep extends Morph {
 			}, 0, 2);
 			coolDown = System.currentTimeMillis() + 3000;
 		}
-	}
+	}*/
 
 	@Override
 	public void onUpdate() {
