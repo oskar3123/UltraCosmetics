@@ -33,7 +33,7 @@ public class MorphBlaze extends Morph {
 				|| event.getAction() == Action.LEFT_CLICK_BLOCK) && event.getPlayer() == getPlayer()) {
 			if (coolDown > System.currentTimeMillis()) return;
 			event.setCancelled(true);
-			SoundUtil.playSound(getPlayer(), Sounds.BAT_LOOP, 0.4f, 1.0f);
+			SoundUtil.playSound(getPlayer(), Sounds.FIZZ, 0.4f, 1.0f);
 			coolDown = System.currentTimeMillis() + 500;
 		}
 	}
